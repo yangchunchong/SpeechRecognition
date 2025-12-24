@@ -1,0 +1,47 @@
+class SpeechRecognitionLibs:
+    """语音识别库对比"""
+
+    def compare_libraries(self):
+        libraries = {
+            "SpeechRecognition": {
+                "类型": "离线/在线混合",
+                "支持的API": ["Google", "Wit.ai", "IBM", "Bing", "CMU Sphinx"],
+                "优点": "简单易用，支持多引擎",
+                "缺点": "依赖网络（除Sphinx）",
+                "安装": "pip install SpeechRecognition",
+                "适用场景": "通用语音识别"
+            },
+            "Vosk": {
+                "类型": "离线",
+                "支持的API": "自有模型",
+                "优点": "完全离线，速度快，支持多语言",
+                "缺点": "模型文件较大",
+                "安装": "pip install vosk",
+                "适用场景": "离线实时识别"
+            },
+            "Whisper": {
+                "类型": "离线",
+                "支持的API": "OpenAI模型",
+                "优点": "精度高，支持多语言，上下文理解",
+                "缺点": "资源消耗大，速度较慢",
+                "安装": "pip install openai-whisper",
+                "适用场景": "高精度转录"
+            },
+            "DeepSpeech": {
+                "类型": "离线",
+                "支持的API": "Mozilla模型",
+                "优点": "开源，可训练自定义模型",
+                "缺点": "中文支持一般，配置复杂",
+                "安装": "pip install deepspeech",
+                "适用场景": "可定制的离线识别"
+            },
+            "PaddleSpeech": {
+                "类型": "离线/在线",
+                "支持的API": "百度飞桨",
+                "优点": "中文优化，功能全面",
+                "缺点": "相对较新，社区较小",
+                "安装": "pip install paddlespeech",
+                "适用场景": "中文语音处理"
+            }
+        }
+        return libraries
